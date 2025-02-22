@@ -6,7 +6,7 @@
 #
 one:
   email: test@example.com
-  useraname: kiyoscript
+  username: kiyoscript
   first_name: johnlloyd
   last_name: de Sape
   phone_number: 09123647126
