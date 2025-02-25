@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def respond_with(resource, options = {})
     if resource.persisted?
-      render json: { status: { code: 200, message: "Sign up successfully", user: resource  } }, status: :ok
+      render json: { status: { code: 200, message: "Sign up successfully", data: resource  } }, status: :ok
     else
       render json: { status: { code: 422,  message: "User could not be created", errors: resource.errors.full_messages } }, status: :unprocessable_entity
     end

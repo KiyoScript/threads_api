@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
     headers["Authorization"] = @token
 
     if resource.persisted?
-      render json: { status: { code: 200, message: "Signed in successfully", user: resource } }, status: :ok
+      render json: { status: { code: 200, message: "Signed in successfully", data: resource } }, status: :ok
     else
       render json: { status: { code: 401, message: "Invalid credentials" } }, status: :unauthorized
     end
